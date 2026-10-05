@@ -1,0 +1,146 @@
+<title>Frontend Mentor | QR code component</title>
+  <style>
+    /* reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #d5e1ef; /* light blue-grey from design */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    /* main card */
+    .qr-card {
+      background-color: #ffffff;
+      max-width: 320px;
+      width: 100%;
+      border-radius: 20px;
+      padding: 1rem 1rem 1.8rem;  /* top/sides/bottom */
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .qr-card:hover {
+      transform: scale(1.01);
+    }
+
+    /* image wrapper with aspect ratio */
+    .qr-image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #2c7dfa; /* fallback – but qr code will show */
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* text section */
+    .qr-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #1f314f; /* dark navy */
+      margin: 1.5rem 0.5rem 1rem;
+      letter-spacing: 0.2px;
+    }
+
+    .qr-description {
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.4;
+      color: #7b879d; /* greyish blue */
+      margin: 0 0.75rem 0.5rem;
+      letter-spacing: 0.2px;
+    }
+
+    /* attribution – minimal & clean */
+    .attribution {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      text-align: center;
+      color: #1f314f;
+      opacity: 0.7;
+    }
+
+    .attribution a {
+      color: #2c7dfa;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attribution a:hover {
+      text-decoration: underline;
+    }
+
+    /* small screens adjustments */
+    @media (max-width: 380px) {
+      .qr-card {
+        padding: 0.9rem 0.9rem 1.5rem;
+      }
+
+      .qr-title {
+        font-size: 1.25rem;
+        margin: 1.2rem 0.3rem 0.8rem;
+      }
+
+      .qr-description {
+        font-size: 0.9rem;
+        margin: 0 0.4rem 0.4rem;
+      }
+    }
+
+    /* optional: use Outfit font if available, fallback is fine */
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+  </style>
+</head>
+<body>
+  <!-- main qr component -->
+  <article class="qr-card">
+    <div class="qr-image-wrapper">
+      <!-- 
+        QR code image from Frontend Mentor's standard asset.
+        Using a high-quality SVG/PNG that matches the design exactly.
+        The image is a placeholder from the Frontend Mentor starter files.
+        It shows a QR code linking to frontendmentor.io.
+      -->
+      <img 
+        src="https://raw.githubusercontent.com/FrontendMentor/frontendmentor-qr-code-component/main/images/image-qr-code.png" 
+        alt="QR code linking to Frontend Mentor website"
+        loading="lazy"
+      >
+    </div>
+    <h1 class="qr-title">
+      Improve your front-end skills by building projects
+    </h1>
+    <p class="qr-description">
+      Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+    </p>
+  </article>
+
+  <!-- attribution (optional but nice) -->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
+    Coded by <a href="#" target="_blank" rel="noopener noreferrer">Your Name</a>.
+  </footer>
+</body>
+</html>
+
